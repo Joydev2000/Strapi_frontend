@@ -26,8 +26,12 @@ export default function page() {
                 Blogs
               </Link>
               <Link href="/Contact" className="text-gray-600 hover:text-gray-900">
-                Blogs
+                Contact Us
               </Link>
+               <Link href="/Blogs_withcategory" className="text-gray-600 hover:text-gray-900">
+                Blog With catagory
+              </Link>
+
             </div>
 
             <div className="flex items-center space-x-4">

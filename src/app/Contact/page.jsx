@@ -19,7 +19,7 @@ const Page = () => {
         setIsError(false); // Clear previous error state
 
         try {
-          const response = await fetch("http://127.0.0.1:1337/api/contact-forms", {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/contact-forms`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

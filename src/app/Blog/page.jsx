@@ -37,7 +37,7 @@ export default async function Page({ searchParams }) {
                   className="text-gray-600 mb-4 text-[1.2em] prose prose-sm max-w-none line-clamp-3"
                   dangerouslySetInnerHTML={{ __html: blog.Description}}
                 />
-                <Link href={`/Blog/${blog.slug}`} className="text-blue-500 hover:underline">
+                <Link href={`Blog/${blog.slug}`} className="text-blue-500 hover:underline">
                   Read More
                 </Link>
               </div>

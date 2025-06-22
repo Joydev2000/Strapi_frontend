@@ -1,11 +1,11 @@
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-const TOKEN = process.env.NEXT_PUBLIC_STRAPI_TOKEN;
+// const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+// const TOKEN = process.env.NEXT_PUBLIC_STRAPI_TOKEN;
 
 const blogs = async (page = 1, pageSize = 6) => {
   try {
-    const res = await fetch(`${API_URL}/api/blogs?populate=*`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs?populate=*`, {
       headers: {
-        Authorization: `Bearer ${TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
       },
       next: {
         revalidate: 30, // ⏱ ISR: Regenerate the page every 60 seconds
